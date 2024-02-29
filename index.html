@@ -1,298 +1,325 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <title>Jogo dos pontos V1.0</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="script.js"></script>
 
-        <link rel="apple-touch-icon" sizes="57x57" href="img/icon/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="img/icon/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="img/icon/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="img/icon/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="img/icon/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="img/icon/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="img/icon/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="img/icon/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="img/icon/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="img/icon/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
-        <link rel="manifest" href="img/icon/manifest.json">
-        <meta name="msapplication-TileColor" content="#008d18">
-        <meta name="msapplication-TileImage" content="img/icon/ms-icon-144x144.png">
-        <meta name="theme-color" content="#008d18">
-    </head>
-<body onLoad="dots_ini()" style="background:#fff;">
+<head>
+    <title>Jogo dos pontos V1.0</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 
-<center>
-<form name="f">
-    <h2 style="text-shadow:0px 1px 4px #5c5c5c;">Jogo Dos Pontos</h2>
-<table bgcolor=#ffffff border="0" cellpadding="0" cellspacing="0">
-<tr>
-<td align=center><input type=radio name="x1" onclick="convert(1);"></td>
-<td align=center><img name='i0' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x2" onclick="convert(2);"></td>
-<td align=center><img name='i1' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x3" onclick="convert(3);"></td>
-<td align=center><img name='i2' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x4" onclick="convert(4);"></td>
-<td align=center><img name='i3' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x5" onclick="convert(5);"></td>
-<td align=center><img name='i4' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x6" onclick="convert(6);"></td>
-<td align=center><img name='i5' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x7" onclick="convert(7);"></td>
-<td align=center><img name='i6' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x8" onclick="convert(8);"></td>
-</tr>
-<tr>
-<td align=center><img name='i7' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i8' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i9' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i10' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i11' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i12' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i13' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i14' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i15' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i16' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i17' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i18' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i19' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i20' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i21' src='img/images.png' width=5  height=30></td>
-</tr>
-<tr>
-<td align=center><input type=radio name="x9" onclick="convert(9);"></td>
-<td align=center><img name='i22' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x10" onclick="convert(10);"></td>
-<td align=center><img name='i23' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x11" onclick="convert(11);"></td>
-<td align=center><img name='i24' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x12" onclick="convert(12);"></td>
-<td align=center><img name='i25' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x13" onclick="convert(13);"></td>
-<td align=center><img name='i26' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x14" onclick="convert(14);"></td>
-<td align=center><img name='i27' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x15" onclick="convert(15);"></td>
-<td align=center><img name='i28' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x16" onclick="convert(16);"></td>
-</tr>
-<tr>
-<td align=center><img name='i29' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i30' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i31' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i32' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i33' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i34' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i35' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i36' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i37' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i38' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i39' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i40' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i41' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i42' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i43' src='img/images.png' width=5  height=30></td>
-</tr>
-<tr>
-<td align=center><input type=radio name="x17" onclick="convert(17);"></td>
-<td align=center><img name='i44' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x18" onclick="convert(18);"></td>
-<td align=center><img name='i45' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x19" onclick="convert(19);"></td>
-<td align=center><img name='i46' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x20" onclick="convert(20);"></td>
-<td align=center><img name='i47' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x21" onclick="convert(21);"></td>
-<td align=center><img name='i48' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x22" onclick="convert(22);"></td>
-<td align=center><img name='i49' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x23" onclick="convert(23);"></td>
-<td align=center><img name='i50' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x24" onclick="convert(24);"></td>
-</tr>
-<tr>
-<td align=center><img name='i51' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i52' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i53' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i54' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i55' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i56' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i57' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i58' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i59' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i60' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i61' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i62' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i63' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i64' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i65' src='img/images.png' width=5  height=30></td>
-</tr>
-<tr>
-<td align=center><input type=radio name="x25" onclick="convert(25);"></td>
-<td align=center><img name='i66' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x26" onclick="convert(26);"></td>
-<td align=center><img name='i67' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x27" onclick="convert(27);"></td>
-<td align=center><img name='i68' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x28" onclick="convert(28);"></td>
-<td align=center><img name='i69' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x29" onclick="convert(29);"></td>
-<td align=center><img name='i70' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x30" onclick="convert(30);"></td>
-<td align=center><img name='i71' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x31" onclick="convert(31);"></td>
-<td align=center><img name='i72' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x32" onclick="convert(32);"></td>
-</tr>
-<tr>
-<td align=center><img name='i73' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i74' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i75' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i76' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i77' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i78' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i79' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i80' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i81' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i82' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i83' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i84' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i85' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i86' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i87' src='img/images.png' width=5  height=30></td>
-</tr>
-<tr>
-<td align=center><input type=radio name="x33" onclick="convert(33);"></td>
-<td align=center><img name='i88' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x34" onclick="convert(34);"></td>
-<td align=center><img name='i89' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x35" onclick="convert(35);"></td>
-<td align=center><img name='i90' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x36" onclick="convert(36);"></td>
-<td align=center><img name='i91' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x37" onclick="convert(37);"></td>
-<td align=center><img name='i92' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x38" onclick="convert(38);"></td>
-<td align=center><img name='i93' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x39" onclick="convert(39);"></td>
-<td align=center><img name='i94' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x40" onclick="convert(40);"></td>
-</tr>
-<tr>
-<td align=center><img name='i95' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i96' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i97' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i98' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i99' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i100' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i101' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i102' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i103' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i104' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i105' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i106' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i107' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i108' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i109' src='img/images.png' width=5  height=30></td>
-</tr>
-<tr>
-<td align=center><input type=radio name="x41" onclick="convert(41);"></td>
-<td align=center><img name='i110' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x42" onclick="convert(42);"></td>
-<td align=center><img name='i111' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x43" onclick="convert(43);"></td>
-<td align=center><img name='i112' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x44" onclick="convert(44);"></td>
-<td align=center><img name='i113' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x45" onclick="convert(45);"></td>
-<td align=center><img name='i114' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x46" onclick="convert(46);"></td>
-<td align=center><img name='i115' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x47" onclick="convert(47);"></td>
-<td align=center><img name='i116' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x48" onclick="convert(48);"></td>
-</tr>
-<tr>
-<td align=center><img name='i117' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i118' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i119' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i120' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i121' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i122' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i123' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i124' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i125' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i126' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i127' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i128' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i129' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i130' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i131' src='img/images.png' width=5  height=30></td>
-</tr>
-<tr>
-<td align=center><input type=radio name="x49" onclick="convert(49);"></td>
-<td align=center><img name='i132' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x50" onclick="convert(50);"></td>
-<td align=center><img name='i133' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x51" onclick="convert(51);"></td>
-<td align=center><img name='i134' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x52" onclick="convert(52);"></td>
-<td align=center><img name='i135' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x53" onclick="convert(53);"></td>
-<td align=center><img name='i136' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x54" onclick="convert(54);"></td>
-<td align=center><img name='i137' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x55" onclick="convert(55);"></td>
-<td align=center><img name='i138' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x56" onclick="convert(56);"></td>
-</tr>
-<tr>
-<td align=center><img name='i139' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i140' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i141' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i142' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i143' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i144' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i145' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i146' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i147' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i148' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i149' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i150' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i151' src='img/images.png' width=5  height=30></td>
-<td align=center><img name='i152' src='img/images.png' width=30 height=30></td>
-<td align=center><img name='i153' src='img/images.png' width=5  height=30></td>
-</tr>
-<tr>
-<td align=center><input type=radio name="x57" onclick="convert(57);"></td>
-<td align=center><img name='i154' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x58" onclick="convert(58);"></td>
-<td align=center><img name='i155' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x59" onclick="convert(59);"></td>
-<td align=center><img name='i156' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x60" onclick="convert(60);"></td>
-<td align=center><img name='i157' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x61" onclick="convert(61);"></td>
-<td align=center><img name='i158' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x62" onclick="convert(62);"></td>
-<td align=center><img name='i159' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x63" onclick="convert(63);"></td>
-<td align=center><img name='i160' src='img/images.png' width=30 height=5></td>
-<td align=center><input type=radio name="x64" onclick="convert(64);"></td>
-</tr>
-<tr>
-<td bgcolor=silver colspan=7>&nbsp;IA:<input type=text name='comp' size=2 value=0></td>
-<td bgcolor=silver colspan=5>Jogador:  <input type=text name='plyr' size=2 value=0></td>
-<td bgcolor=silver colspan=3><input type=button value='Reset' onclick="window.location=window.location;"></td>
-</tr>
-</table>
-</form>
-</center>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+    <link rel="manifest" href="img/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#008d18">
+    <meta name="msapplication-TileImage" content="img/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#008d18">
+    <script>
+        (function (d, w){
+            var s = d.createElement("script")
+            s.type = "text/javascript"
+            s.src = "https://www.lumamax.com.br/api/sdkAds/adsmax.js"
+            d.getElementsByTagName('head')[0].appendChild(s)
+        })(document, window)
+    </script>
+</head>
+
+<body class="w3-light-grey" onLoad="dots_ini()">
+    <div class="w3-content w3-center">
+
+        <h5 style="text-shadow: 0px 0px 3px #000;">Jogo dos pontos</h5>
+
+        <form class="w3-mobile" name="f">
+
+            <table style="width:100%;" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td><input type=radio name="x1" onclick="convert(1);"></td>
+                    <td><img name='i0' src='img/images.png' width=30 height=5></td>
+                    <td><input type=radio name="x2" onclick="convert(2);"></td>
+                    <td><img name='i1' src='img/images.png' width=30 height=5></td>
+                    <td><input type=radio name="x3" onclick="convert(3);"></td>
+                    <td><img name='i2' src='img/images.png' width=30 height=5></td>
+                    <td><input type=radio name="x4" onclick="convert(4);"></td>
+                    <td><img name='i3' src='img/images.png' width=30 height=5></td>
+                    <td><input type=radio name="x5" onclick="convert(5);"></td>
+                    <td><img name='i4' src='img/images.png' width=30 height=5></td>
+                    <td><input type=radio name="x6" onclick="convert(6);"></td>
+                    <td><img name='i5' src='img/images.png' width=30 height=5></td>
+                    <td><input type=radio name="x7" onclick="convert(7);"></td>
+                    <td><img name='i6' src='img/images.png' width=30 height=5></td>
+                    <td><input type=radio name="x8" onclick="convert(8);"></td>
+                </tr>
+                <tr>
+                    <td><img name='i7' src='img/images.png' width=5 height=30></td>
+                    <td><img name='i8' src='img/images.png' width=30 height=30></td>
+                    <td><img name='i9' src='img/images.png' width=5 height=30></td>
+                    <td><img name='i10' src='img/images.png' width=30 height=30></td>
+                    <td><img name='i11' src='img/images.png' width=5 height=30></td>
+                    <td><img name='i12' src='img/images.png' width=30 height=30></td>
+                    <td><img name='i13' src='img/images.png' width=5 height=30></td>
+                    <td><img name='i14' src='img/images.png' width=30 height=30></td>
+                    <td><img name='i15' src='img/images.png' width=5 height=30></td>
+                    <td><img name='i16' src='img/images.png' width=30 height=30></td>
+                    <td><img name='i17' src='img/images.png' width=5 height=30></td>
+                    <td><img name='i18' src='img/images.png' width=30 height=30></td>
+                    <td><img name='i19' src='img/images.png' width=5 height=30></td>
+                    <td><img name='i20' src='img/images.png' width=30 height=30></td>
+                    <td><img name='i21' src='img/images.png' width=5 height=30></td>
+                </tr>
+                <tr>
+                    <td ><input type=radio name="x9" onclick="convert(9);"></td>
+                    <td ><img name='i22' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x10" onclick="convert(10);"></td>
+                    <td ><img name='i23' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x11" onclick="convert(11);"></td>
+                    <td ><img name='i24' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x12" onclick="convert(12);"></td>
+                    <td ><img name='i25' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x13" onclick="convert(13);"></td>
+                    <td ><img name='i26' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x14" onclick="convert(14);"></td>
+                    <td ><img name='i27' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x15" onclick="convert(15);"></td>
+                    <td ><img name='i28' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x16" onclick="convert(16);"></td>
+                </tr>
+                <tr>
+                    <td ><img name='i29' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i30' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i31' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i32' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i33' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i34' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i35' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i36' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i37' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i38' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i39' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i40' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i41' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i42' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i43' src='img/images.png' width=5 height=30></td>
+                </tr>
+                <tr>
+                    <td ><input type=radio name="x17" onclick="convert(17);"></td>
+                    <td ><img name='i44' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x18" onclick="convert(18);"></td>
+                    <td ><img name='i45' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x19" onclick="convert(19);"></td>
+                    <td ><img name='i46' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x20" onclick="convert(20);"></td>
+                    <td ><img name='i47' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x21" onclick="convert(21);"></td>
+                    <td ><img name='i48' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x22" onclick="convert(22);"></td>
+                    <td ><img name='i49' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x23" onclick="convert(23);"></td>
+                    <td ><img name='i50' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x24" onclick="convert(24);"></td>
+                </tr>
+                <tr>
+                    <td ><img name='i51' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i52' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i53' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i54' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i55' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i56' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i57' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i58' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i59' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i60' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i61' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i62' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i63' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i64' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i65' src='img/images.png' width=5 height=30></td>
+                </tr>
+                <tr>
+                    <td ><input type=radio name="x25" onclick="convert(25);"></td>
+                    <td ><img name='i66' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x26" onclick="convert(26);"></td>
+                    <td ><img name='i67' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x27" onclick="convert(27);"></td>
+                    <td ><img name='i68' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x28" onclick="convert(28);"></td>
+                    <td ><img name='i69' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x29" onclick="convert(29);"></td>
+                    <td ><img name='i70' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x30" onclick="convert(30);"></td>
+                    <td ><img name='i71' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x31" onclick="convert(31);"></td>
+                    <td ><img name='i72' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x32" onclick="convert(32);"></td>
+                </tr>
+                <tr>
+                    <td ><img name='i73' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i74' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i75' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i76' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i77' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i78' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i79' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i80' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i81' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i82' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i83' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i84' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i85' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i86' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i87' src='img/images.png' width=5 height=30></td>
+                </tr>
+                <tr>
+                    <td ><input type=radio name="x33" onclick="convert(33);"></td>
+                    <td ><img name='i88' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x34" onclick="convert(34);"></td>
+                    <td ><img name='i89' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x35" onclick="convert(35);"></td>
+                    <td ><img name='i90' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x36" onclick="convert(36);"></td>
+                    <td ><img name='i91' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x37" onclick="convert(37);"></td>
+                    <td ><img name='i92' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x38" onclick="convert(38);"></td>
+                    <td ><img name='i93' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x39" onclick="convert(39);"></td>
+                    <td ><img name='i94' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x40" onclick="convert(40);"></td>
+                </tr>
+                <tr>
+                    <td ><img name='i95' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i96' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i97' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i98' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i99' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i100' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i101' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i102' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i103' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i104' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i105' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i106' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i107' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i108' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i109' src='img/images.png' width=5 height=30></td>
+                </tr>
+                <tr>
+                    <td ><input type=radio name="x41" onclick="convert(41);"></td>
+                    <td ><img name='i110' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x42" onclick="convert(42);"></td>
+                    <td ><img name='i111' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x43" onclick="convert(43);"></td>
+                    <td ><img name='i112' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x44" onclick="convert(44);"></td>
+                    <td ><img name='i113' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x45" onclick="convert(45);"></td>
+                    <td ><img name='i114' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x46" onclick="convert(46);"></td>
+                    <td ><img name='i115' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x47" onclick="convert(47);"></td>
+                    <td ><img name='i116' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x48" onclick="convert(48);"></td>
+                </tr>
+                <tr>
+                    <td ><img name='i117' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i118' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i119' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i120' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i121' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i122' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i123' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i124' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i125' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i126' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i127' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i128' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i129' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i130' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i131' src='img/images.png' width=5 height=30></td>
+                </tr>
+                <tr>
+                    <td ><input type=radio name="x49" onclick="convert(49);"></td>
+                    <td ><img name='i132' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x50" onclick="convert(50);"></td>
+                    <td ><img name='i133' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x51" onclick="convert(51);"></td>
+                    <td ><img name='i134' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x52" onclick="convert(52);"></td>
+                    <td ><img name='i135' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x53" onclick="convert(53);"></td>
+                    <td ><img name='i136' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x54" onclick="convert(54);"></td>
+                    <td ><img name='i137' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x55" onclick="convert(55);"></td>
+                    <td ><img name='i138' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x56" onclick="convert(56);"></td>
+                </tr>
+                <tr>
+                    <td ><img name='i139' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i140' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i141' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i142' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i143' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i144' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i145' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i146' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i147' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i148' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i149' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i150' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i151' src='img/images.png' width=5 height=30></td>
+                    <td ><img name='i152' src='img/images.png' width=30 height=30></td>
+                    <td ><img name='i153' src='img/images.png' width=5 height=30></td>
+                </tr>
+                <tr>
+                    <td ><input type=radio name="x57" onclick="convert(57);"></td>
+                    <td ><img name='i154' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x58" onclick="convert(58);"></td>
+                    <td ><img name='i155' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x59" onclick="convert(59);"></td>
+                    <td ><img name='i156' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x60" onclick="convert(60);"></td>
+                    <td ><img name='i157' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x61" onclick="convert(61);"></td>
+                    <td ><img name='i158' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x62" onclick="convert(62);"></td>
+                    <td ><img name='i159' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x63" onclick="convert(63);"></td>
+                    <td ><img name='i160' src='img/images.png' width=30 height=5></td>
+                    <td ><input type=radio name="x64" onclick="convert(64);"></td>
+                </tr>
+            </table>
+
+            <div class="w3-row w3-dark-grey">
+                <div class="w3-col s4">
+                    <span class="w3-block w3-button">IA: <input class="w3-input w3-dark-grey w3-center" type="text" value="0" name="comp" readonly="readonly"></span>
+                </div>
+                <div class="w3-col s4">
+                    <span class="w3-block w3-button">Jogador: <input class="w3-input w3-dark-grey w3-center" type="text" value="0" name="plyr" readonly="readonly"></span>
+                </div>
+                <div class="w3-col s4">
+                    <input class="w3-block w3-button" type="button" value="Reset" onclick="window.location=window.location">
+                </div>
+            </div>
+
+        </form>
+
+        <div class="adMax1 w3-margin-top w3-margin-buttom" id="adMax1"></div>
         
-    </body>
+        <div class="adMax2 w3-margin-top w3-margin-buttom" id="adMax2"></div>
+    </div>
+</body>
+
 </html>
