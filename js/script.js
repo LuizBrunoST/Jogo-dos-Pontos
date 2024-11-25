@@ -431,7 +431,7 @@ function reply2() {
 }
 
 
-console.log("LUIZ BRUNO - LUMAMAX | SCRIPT TUTORIAIS2019 2024");
+console.log("LUIZ BRUNO - LUMAMAX | SCRIPT TUTORIAIS 2019 2024");
 
 $(document).ready(function() {
    // Função para realizar a requisição AJAX e atualizar a div com o conteúdo da resposta
@@ -451,11 +451,11 @@ function loadAds() {
    // Array de URLs e classes de div correspondentes
    var urls = [
        {
-           url: 'https://www.lumamax.com.br/api/sdkAds/ads?id_usuario=1&site=8&id_bloco=18',
+           url: 'https://lumamax.com.br/api/sdkAds/ads?id_usuario=1&site=8&id_bloco=18',
            divClass: '.adMax1'
        },
        {
-           url: 'https://www.lumamax.com.br/api/sdkAds/ads?id_usuario=1&site=8&id_bloco=17',
+           url: 'https://lumamax.com.br/api/sdkAds/ads?id_usuario=1&site=8&id_bloco=17',
            divClass: '.adMax2'
        }
        // Adicione mais objetos URL/divClass conforme necessário
